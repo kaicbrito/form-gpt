@@ -1,7 +1,7 @@
 const form = document.getElementById('form');
 const resultado = document.getElementById('resultado');
 
-form.addEventListener('submit', function(event) {
+form.addEventListener('submit', function (event) {
   event.preventDefault();
   const nomeCompleto = document.getElementById('nomeCompleto').value;
   const email = document.getElementById('email').value;
@@ -30,22 +30,3 @@ form.addEventListener('submit', function(event) {
   addPeople(dados)
   resultado.innerHTML = 'Dados salvos com sucesso!';
 });
-
-
-const listPeoples = () => {
-    const peoples = localStorage.getItem("peoples")
-    if(peoples) {
-        return JSON.parse(peoples)
-    }
-
-    return []
-}
-
-const addPeople = (people) => {
-    const oldPeoples = listPeoples()
-
-    const newPeoples = [...oldPeoples, people]
-    
-    localStorage.setItem("peoples", JSON.stringify(newPeoples))
-    return newPeoples
-}
