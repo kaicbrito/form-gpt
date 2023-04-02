@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Consulta de dados</title>
+</head>
+<body>
+	<h1>Dados do formulário</h1>
+
+	<div id="dados"></div>
+
+	<script>
+		const dados = JSON.parse(localStorage.getItem('formularioDados'));
+		const divDados = document.getElementById('dados');
+		divDados.innerHTML = `
+			<p><strong>Nome completo:</strong> ${dados.nomeCompleto}</p>
+			<p><strong>E-mail:</strong> ${dados.email}</p>
+			<p><strong>Sexo:</strong> ${dados.sexo}</p>
+			<p><strong>Nome do pai:</strong> ${dados.nomePai}</p>
+			<p><strong>Nome da mãe:</strong> ${dados.nomeMae}</p>
+			<p><strong>Endereço:</strong> ${dados.endereco}</p>
+		`;
+	</script>
+</body>
+</html>

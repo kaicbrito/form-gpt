@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Formulário</title>
+	<link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+	<form id="form">
+		<label for="nomeCompleto">Nome completo:</label>
+		<input type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+		<label for="email">E-mail:</label>
+		<input type="email" id="email" name="email" required>
+
+		<label>Sexo:</label>
+		<input type="radio" id="masculino" name="sexo" value="masculino" required>
+		<label for="masculino">Masculino</label>
+		<input type="radio" id="feminino" name="sexo" value="feminino" required>
+		<label for="feminino">Feminino</label>
+
+		<label for="nomePai">Nome do pai:</label>
+		<input type="text" id="nomePai" name="nomePai">
+
+		<label for="nomeMae">Nome da mãe:</label>
+		<input type="text" id="nomeMae" name="nomeMae">
+
+		<label for="endereco">Endereço:</label>
+		<textarea id="endereco" name="endereco" required></textarea>
+
+		<button type="submit">Enviar</button>
+	</form>
+
+	<div id="resultado"></div>
+
+	<script src="formulario.js"></script>
+</body>
+</html>
